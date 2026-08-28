@@ -1,0 +1,30 @@
+name: Test Homebrew Tap
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out tap
+        uses: actions/checkout@v4
+
+      - name: Update Homebrew
+        run: brew update
+
+      - name: Audit formula
+        run: brew audit --formula --strict Formula/concordui.rb || true
+
+      - name: Install development formula
+        run: brew install --HEAD --formula Formula/concordui.rb
+
+      - name: Test formula
+        run: brew test Formula/concordui.rb
+
+      - name: Verify CLI
+        run: concordui -v
