@@ -14,16 +14,16 @@ The AetherCircle command-line tool creates cross-platform immersive applications
 
 Before public release, testers must have GitHub access and configure GitHub SSH authentication on their Mac.
 
-Verify GitHub SSH access:
+Verify GitHub SSH access over port 443:
 
 ```bash
-ssh -T git@github.com
+ssh -T -p 443 git@ssh.github.com
 ```
 
 Add the private tap:
 
 ```bash
-brew tap zodiac-innovations/tap ssh://git@github.com/Zodiac-Innovations/homebrew-tap.git
+brew tap zodiac-innovations/tap ssh://git@ssh.github.com:443/Zodiac-Innovations/homebrew-tap.git
 ```
 
 Install either development tool:
