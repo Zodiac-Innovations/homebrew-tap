@@ -53,6 +53,6 @@ brew install zodiac-innovations/tap/aethercircle
 ## Distribution Models
 
 - `concordui.rb` currently builds the ConcordUI CLI from source.
-- `aethercircle.rb` installs the precompiled universal executable and resource bundle published in `magesteve/AetherCircleCLI`.
+- `aethercircle.rb` installs the precompiled universal executable and resource bundle published in `Zodiac-Innovations/AetherCircleCLI`.
 
 Stable formulas should reference immutable tagged archives. Moving `main` branches are used only for development and private-beta `--HEAD` installations.

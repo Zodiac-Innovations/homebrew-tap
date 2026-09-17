@@ -1,7 +1,7 @@
 class Aethercircle < Formula
   desc "Cross-platform AetherCircle immersive application development tools"
   homepage "https://aethercircle.org"
-  head "ssh://git@github.com/magesteve/AetherCircleCLI.git", branch: "main"
+  head "ssh://git@github.com/Zodiac-Innovations/AetherCircleCLI.git", branch: "main"
 
   depends_on :macos
   depends_on "xcodegen"
