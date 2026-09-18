@@ -8,7 +8,15 @@ class Aethercircle < Formula
 
   def install
     libexec.install "aethercircle"
-    libexec.install "aethercircleicon-1024.png"
+
+    if File.exist?("aethercircleicon-1024.png")
+      libexec.install "aethercircleicon-1024.png"
+    else
+      resource_bundles = Dir["*.bundle"]
+      odie "AetherCircle CLI app icon is missing" if resource_bundles.empty?
+      resource_bundles.each { |bundle| libexec.install bundle }
+    end
+
     bin.write_exec_script libexec/"aethercircle"
   end
 
