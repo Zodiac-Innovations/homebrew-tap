@@ -8,11 +8,7 @@ class Aethercircle < Formula
 
   def install
     libexec.install "aethercircle"
-
-    resource_bundles = Dir["*.bundle"]
-    odie "AetherCircle CLI resource bundle is missing" if resource_bundles.empty?
-    resource_bundles.each { |bundle| libexec.install bundle }
-
+    Dir["*.bundle"].each { |bundle| libexec.install bundle }
     bin.write_exec_script libexec/"aethercircle"
   end
 
