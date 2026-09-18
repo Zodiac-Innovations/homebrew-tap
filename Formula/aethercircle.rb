@@ -8,7 +8,7 @@ class Aethercircle < Formula
 
   def install
     libexec.install "aethercircle"
-    Dir["*.bundle"].each { |bundle| libexec.install bundle }
+    libexec.install "aethercircleicon-1024.png"
     bin.write_exec_script libexec/"aethercircle"
   end
 
