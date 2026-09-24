@@ -4,11 +4,11 @@ This shared Homebrew tap supports **both AetherCircle and ConcordUI** command-li
 
 ## ConcordUI
 
-The ConcordUI command-line tool automates ConcordUI project creation and platform setup for Apple and Android development.
+The current ConcordUI preview executable prints `Soon to be released`.
 
 ## AetherCircle
 
-The AetherCircle command-line tool creates cross-platform immersive applications for Apple Vision Pro and Meta Quest.
+The current AetherCircle preview executable prints `Soon to be released`.
 
 ## Private Beta Installation
 
@@ -53,7 +53,7 @@ brew install --HEAD zodiac-innovations/tap/aethercircle
 
 ## Distribution Models
 
-- `concordui.rb` currently builds the ConcordUI CLI from source.
+- `concordui.rb` installs the precompiled universal executable and default app icon published in `Zodiac-Innovations/ConcordUICLI`.
 - `aethercircle.rb` installs the precompiled universal executable and default app icon published in `Zodiac-Innovations/AetherCircleCLI`.
 
 These preview formulas track the CLI repositories' `main` branches using `--HEAD`. Both preview executables currently print `Soon to be released`. Future stable formulas should reference immutable tagged archives.
