@@ -1,7 +1,7 @@
 class Concordui < Formula
   desc "Cross-platform ConcordUI development command-line tools"
   homepage "https://concordui.org"
-  head "ssh://git@ssh.github.com:443/Zodiac-Innovations/ConcordUICLI.git", branch: "main"
+  head "https://github.com/Zodiac-Innovations/ConcordUICLI.git", branch: "main"
 
   depends_on :macos
 
