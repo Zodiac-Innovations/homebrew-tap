@@ -12,7 +12,7 @@ The AetherCircle command-line tool creates cross-platform immersive applications
 
 ## Private Beta Installation
 
-Before public release, testers must have GitHub access and configure GitHub SSH authentication on their Mac.
+While the repositories are private, testers need GitHub SSH access. Once the distribution repositories and this tap are public, use the public installation commands below.
 
 Verify GitHub SSH access over port 443:
 
@@ -43,11 +43,12 @@ brew upgrade --fetch-HEAD aethercircle
 
 ## Public Release Installation
 
-After versioned releases and the required repositories become public, stable formulas will use immutable release archives and SHA-256 checksums:
+When these repositories become public, install the current preview tools with:
 
 ```bash
-brew install zodiac-innovations/tap/concordui
-brew install zodiac-innovations/tap/aethercircle
+brew tap zodiac-innovations/tap
+brew install --HEAD zodiac-innovations/tap/concordui
+brew install --HEAD zodiac-innovations/tap/aethercircle
 ```
 
 ## Distribution Models
@@ -55,4 +56,4 @@ brew install zodiac-innovations/tap/aethercircle
 - `concordui.rb` currently builds the ConcordUI CLI from source.
 - `aethercircle.rb` installs the precompiled universal executable and default app icon published in `Zodiac-Innovations/AetherCircleCLI`.
 
-Stable formulas should reference immutable tagged archives. Moving `main` branches are used only for development and private-beta `--HEAD` installations.
+These preview formulas track the CLI repositories' `main` branches using `--HEAD`. Both preview executables currently print `Soon to be released`. Future stable formulas should reference immutable tagged archives.
