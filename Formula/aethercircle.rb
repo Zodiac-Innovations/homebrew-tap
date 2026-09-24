@@ -4,7 +4,6 @@ class Aethercircle < Formula
   head "ssh://git@ssh.github.com:443/Zodiac-Innovations/AetherCircleCLI.git", branch: "main"
 
   depends_on :macos
-  depends_on "xcodegen"
 
   def install
     libexec.install "aethercircle"
@@ -24,6 +23,6 @@ class Aethercircle < Formula
   end
 
   test do
-    assert_match "0.1.0", shell_output("#{bin}/aethercircle --version")
+    assert_match "Soon to be released", shell_output("#{bin}/aethercircle --version")
   end
 end

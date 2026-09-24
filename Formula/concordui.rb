@@ -1,24 +1,17 @@
 class Concordui < Formula
   desc "Cross-platform ConcordUI development command-line tools"
   homepage "https://concordui.org"
-  head "ssh://git@github.com/Zodiac-Innovations/ConcordUI.git", branch: "main"
+  head "ssh://git@ssh.github.com:443/Zodiac-Innovations/ConcordUICLI.git", branch: "main"
 
   depends_on :macos
-  depends_on "gradle"
-  depends_on "xcodegen"
 
   def install
-    system "xcodebuild",
-           "-project", "Tools/ConcordUICLI/ConcordUICLI.xcodeproj",
-           "-scheme", "ConcordUICLI",
-           "-configuration", "Release",
-           "-derivedDataPath", buildpath/"build",
-           "CODE_SIGNING_ALLOWED=NO"
-
-    bin.install buildpath/"build/Build/Products/Release/concordui"
+    libexec.install "concordui"
+    libexec.install "concordui-1024.png"
+    bin.write_exec_script libexec/"concordui"
   end
 
   test do
-    assert_match "ConcordUI Command Line Tool Version", shell_output("#{bin}/concordui -v")
+    assert_match "Soon to be released", shell_output("#{bin}/concordui --version")
   end
 end
