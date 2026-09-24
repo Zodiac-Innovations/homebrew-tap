@@ -4,11 +4,11 @@ This shared Homebrew tap supports **both AetherCircle and ConcordUI** command-li
 
 ## ConcordUI
 
-The current ConcordUI preview executable prints `Soon to be released`.
+The ConcordUI command-line tool currently prints `Soon to be released`.
 
 ## AetherCircle
 
-The current AetherCircle preview executable prints `Soon to be released`.
+The AetherCircle command-line tool currently prints `Soon to be released`.
 
 ## Private Beta Installation
 
@@ -43,7 +43,7 @@ brew upgrade --fetch-HEAD aethercircle
 
 ## Public Release Installation
 
-When these repositories become public, install the current preview tools with:
+Install the command-line tools with:
 
 ```bash
 brew tap zodiac-innovations/tap
@@ -56,4 +56,4 @@ brew install --HEAD zodiac-innovations/tap/aethercircle
 - `concordui.rb` installs the precompiled universal executable and default app icon published in `Zodiac-Innovations/ConcordUICLI`.
 - `aethercircle.rb` installs the precompiled universal executable and default app icon published in `Zodiac-Innovations/AetherCircleCLI`.
 
-These preview formulas track the CLI repositories' `main` branches using `--HEAD`. Both preview executables currently print `Soon to be released`. Future stable formulas should reference immutable tagged archives.
+These formulas track the CLI repositories' `main` branches using `--HEAD`. Both executables currently print `Soon to be released`. Future stable formulas should reference immutable tagged archives.
