@@ -1,6 +1,6 @@
 # Zodiac Innovations Homebrew Tap
 
-This repository is the Homebrew tap for command-line tools and developer utilities published by Zodiac Innovations.
+This shared Homebrew tap supports **both AetherCircle and ConcordUI** command-line tools. Add the tap once, then install either tool or both. The CLI software is maintained in its respective project repository; this repository provides the Homebrew formulas used to install and update them.
 
 ## ConcordUI
 
@@ -26,7 +26,7 @@ Add the private tap:
 brew tap zodiac-innovations/tap ssh://git@ssh.github.com:443/Zodiac-Innovations/homebrew-tap.git
 ```
 
-Install either development tool:
+Install either or both development tools:
 
 ```bash
 brew install --HEAD zodiac-innovations/tap/concordui
