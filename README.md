@@ -1,4 +1,4 @@
-# Zodiac Innovations Homebrew Tap
+# homebrew-tap
 
 <https://github.com/Zodiac-Innovations/homebrew-tap>
 
