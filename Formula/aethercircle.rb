@@ -23,6 +23,6 @@ class Aethercircle < Formula
   end
 
   test do
-    assert_match "Soon to be released", shell_output("#{bin}/aethercircle --version")
+    assert_match(/\A\d+\.\d+\.\d+\z/, shell_output("#{bin}/aethercircle --version").strip)
   end
 end
